@@ -11,10 +11,10 @@ function alert() {
 var nav = document.createElement('nav');
 
 nav.innerHTML = `
-    <a href="#" class="logo">
+    <a href="home" class="logo">
         <img src="src/fenodol-logo.png" alt="Fenodol">
     </a>
-    <a href="fenodol/premios" class="link">
+    <a href="premios" class="link">
         <i class="fa-regular fa-hashtag"></i>
         ABC123-XYZ789
     </a>
@@ -22,11 +22,11 @@ nav.innerHTML = `
         <i class="fa-regular fa-coins"></i>
         500 Puntos
     </a>
-    <a href="#" class="link">
-        <i class="fa-solid fa-gear"></i>
-        Configuración
+    <a href="index" class="link">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        Cerrar Sesión
     </a>
-    <a href="fenodol/premios" class="profile">A</a>
+    <a href="premios" class="profile">A</a>
 `;
 
 var footer = document.createElement('footer');
