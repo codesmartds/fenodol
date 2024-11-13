@@ -11,10 +11,10 @@ function alert() {
 var nav = document.createElement('nav');
 
 nav.innerHTML = `
-    <a href="/" class="logo">
+    <a href="#" class="logo">
         <img src="src/fenodol-logo.png" alt="Fenodol">
     </a>
-    <a href="/premios/" class="link">
+    <a href="fenodol/premios" class="link">
         <i class="fa-regular fa-hashtag"></i>
         ABC123-XYZ789
     </a>
@@ -22,20 +22,20 @@ nav.innerHTML = `
         <i class="fa-regular fa-coins"></i>
         500 Puntos
     </a>
-    <a href="/" class="link">
+    <a href="#" class="link">
         <i class="fa-solid fa-gear"></i>
         Configuración
     </a>
-    <a href="/premios/" class="profile">A</a>
+    <a href="fenodol/premios" class="profile">A</a>
 `;
 
 var footer = document.createElement('footer');
 
 footer.innerHTML = `
     <span>© 2024 Fenodol</span>
-    <a href="/">Términos y Condiciones</a>
-    <a href="/">Políticas de Privacidad</a>
-    <a href="/">Registrar facturas</a>
+    <a href="#">Términos y Condiciones</a>
+    <a href="#">Políticas de Privacidad</a>
+    <a href="#">Registrar facturas</a>
 `;
 
 document.body.appendChild(nav);
