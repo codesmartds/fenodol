@@ -173,7 +173,16 @@
                 <h2>¿Para qué sirve Fenodol Max?</h2>
 				<p>Fenodol Max es un medicamento analgésico y antiinflamatorio formulado para aliviar diversos tipos de dolor, incluyendo dolores musculares, articulares y de cabeza.</p>
 				<p>Su fórmula está diseñada para actuar rápidamente, proporcionando alivio prolongado y ayudando a reducir la inflamación en la zona afectada. Además de aliviar el malestar, Fenodol Max es recomendado por especialistas debido a su eficacia en el tratamiento del dolor agudo y crónico, permitiendo una mejora en la calidad de vida de quienes lo usan. Conoce más sobre sus beneficios, formas de uso, y precauciones en los documentos que te proporcionamos a continuación.</p>
-				<h3>Recursos</h3>
+				<div class="quiz">
+                    <h2></h2>
+                    <div class="answers">
+                        <button>Some 1</button>
+                        <button>Some 2</button>
+                        <button>Some 3</button>
+                    </div>
+                </div>
+                
+                <h3>Recursos</h3>
 				<div class="files">
 					<a href="src/fenodol-documento.pdf" download>Guía de Uso de Fenodol Max</a>
 					<a href="src/fenodol-documento.pdf" download>Ficha Técnica de Fenodol Max</a>
@@ -193,7 +202,28 @@
 			<p>¡Felicidades! Has canjeado un premio. Ahora puedes registrar tus facturas.</p>
 			<a href="#" onclick="alert()" class="claim">Canjear Otro Premio</a>
 			<small>Utiliza el <small class="id" onclick="alert()">código de registro</small> proporcionado para registrar tus facturas a través de WhatsApp.</small>
-		</div>		
+		</div>
+		<div class="profile">
+			<span onclick="profile()" class="close">
+			  <i class="fa-solid fa-chevron-left"></i>
+			  Regresar
+			</span>  
+			<img src="src/avatar.png" class="user" height="120" alt="Avatar">
+			<h2>Fernanda Marroquin</h2>
+			<p>Actualiza tu información de contacto para recibir notificaciones importantes.</p>
+			<form action="">
+				<div class="field">
+					<label for="phone">Teléfono</label>
+					<input type="text" name="phone" id="phone" placeholder="Ingresa tu nuevo número de teléfono" value="+502 3838-0047">
+				</div>
+				<div class="field">
+					<label for="email">Correo Electrónico</label>
+					<input type="email" name="email" id="email" placeholder="Ingresa tu nuevo correo electrónico" value="fernandamarro@gmail.com">
+				</div>
+				<button onclick="profile()" class="claim">Actualizar</button>
+			</form>
+			<small>Recibirás un código de verificación a tu nuevo número o correo para confirmar el cambio.</small>
+		</div>  
 	</aside>
 </body>
 <script type="text/javascript" src="src/main.js"></script>

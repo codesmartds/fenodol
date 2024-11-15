@@ -3,6 +3,11 @@ function push() {
     e.classList.toggle("open");
 }
 
+function profile() {
+    var e = document.querySelector("aside");
+    e.classList.toggle("edit");
+}
+
 function alert() {
     var e = document.querySelector("aside");
     e.classList.toggle("alert");
@@ -26,7 +31,7 @@ nav.innerHTML = `
         <i class="fa-solid fa-arrow-right-from-bracket"></i>
         Cerrar Sesión
     </a>
-    <a href="premios" class="profile">A</a>
+    <a onclick="profile()" class="avatar"></a>
 `;
 
 var footer = document.createElement('footer');

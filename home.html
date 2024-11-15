@@ -352,7 +352,28 @@
 				<a href="https://wa.me/50247137766?text=Iniciar%20Chat" target="_blank">Registrar</a>
 			</span>
 			<small>Utiliza el <small class="id" onclick="alert()">código de registro</small> proporcionado para registrar tus facturas a través de WhatsApp.</small>
-		</div>	
+		</div>
+		<div class="profile">
+			<span onclick="profile()" class="close">
+			  <i class="fa-solid fa-chevron-left"></i>
+			  Regresar
+			</span>  
+			<img src="src/avatar.png" class="user" height="120" alt="Avatar">
+			<h2>Fernanda Marroquin</h2>
+			<p>Actualiza tu información de contacto para recibir notificaciones importantes.</p>
+			<form action="">
+				<div class="field">
+					<label for="phone">Teléfono</label>
+					<input type="text" name="phone" id="phone" placeholder="Ingresa tu nuevo número de teléfono" value="+502 3838-0047">
+				</div>
+				<div class="field">
+					<label for="email">Correo Electrónico</label>
+					<input type="email" name="email" id="email" placeholder="Ingresa tu nuevo correo electrónico" value="fernandamarro@gmail.com">
+				</div>
+				<button onclick="profile()" class="claim">Actualizar</button>
+			</form>
+			<small>Recibirás un código de verificación a tu nuevo número o correo para confirmar el cambio.</small>
+		</div>  
 	</aside>
 </body>
 <script type="text/javascript" src="src/main.js"></script>
