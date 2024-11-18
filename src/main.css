@@ -78,13 +78,32 @@ small {
 label {
     font-size: 14px;
     font-weight: 600;
-    line-height: 1.5;
+    line-height: 1;
 }
 
 button {
     outline: 0;
     appearance: none;
     -webkit-appearance: none;
+}
+
+ul {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+    padding-left: 20px;
+}
+
+li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+li::marker {
+    font-size: 16px;
+    color: #ED1C24;
 }
 
 nav {
@@ -440,18 +459,33 @@ section {
     background-image: url(thumbnail-4.png);
 }
 
+.evaluation,
 .points {
     position: absolute;
     display: flex;
     align-items: center;
     gap: 4px;
-    top: 14px;
-    right: 14px;
     color: #fff;
     font-size: 14px;
     font-weight: 600;
     line-height: 1;
     z-index: 2;
+}
+
+.evaluation {
+    bottom: 14px;
+    left: 14px;
+}
+
+.points {
+    top: 14px;
+    right: 14px;
+}
+
+.evaluation::before {
+    font-family: "Font Awesome 6 Pro";
+    content: "\f484";
+    font-weight: 400;
 }
 
 .points::before {
@@ -540,23 +574,15 @@ aside.open .player {
     display: flex;
 }
 
-aside.alert {
-    display: flex;
-    align-items: center;
-    padding: 0;
-}
-
-aside.alert .notification {
-    display: flex;
-}
-
+aside.alert,
 aside.edit {
-    display: flex;
+    display: flex !important;
     align-items: center;
     padding: 0;
 }
 
-aside.edit .profile {
+aside.edit .profile,
+aside.alert .notification {
     display: flex;
 }
 
@@ -632,7 +658,7 @@ aside.edit .profile {
     width: auto;
     height: 40px;
     color: #fff;
-    font-size: 14px;
+    font-size: 14px !important;
     font-weight: 600;
     line-height: 1;
     background: #ED1C24;
@@ -859,6 +885,11 @@ form {
     margin: 20px 0;
 }
 
+.profile form,
+.notification form {
+    margin: 0;
+}
+
 input {
     width: 100%;
     height: 48px;
@@ -926,6 +957,35 @@ input {
     display: none;
 }
 
+.slider {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+}
+
+.step span {
+    display: block;
+    min-width: 14px;
+    height: 14px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.step span:first-child {
+    background-color: #fff;
+}
+
 @media only screen and (max-width: 1280px) {
 
     nav {
@@ -981,7 +1041,7 @@ input {
         display: none;
     }
 
-    .profile {
+    .avatar {
         order: -1;
         margin-right: auto;
     }
@@ -1084,6 +1144,10 @@ input {
         padding-bottom: 50px;
     }
 
+    label {
+        font-size: 12px;
+    }
+
     aside {
         align-items: center;
         padding: 0;
@@ -1093,6 +1157,22 @@ input {
         width: 100%;
         height: 100%;
         border-radius: 0;
+    }
+
+    .entry h2,
+    .player h2 {
+        font-size: 20px;
+    }
+
+    .player h3 {
+        font-size: 16px;
+    }
+
+    .entry p,
+    .player p,
+    .player li,
+    .player  {
+        font-size: 14px;
     }
 
     .control {
@@ -1110,13 +1190,45 @@ input {
         padding-right: 24px;
     }
 
+    .entry {
+        gap: 8px;
+        width: calc(100% - 48px);
+        border: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .entry span {
+        font-size: 12px;
+    }
+
+    .entry img {
+        height: 80px;
+    }
+    
+    .profile,
     .notification {
         padding: 24px;
         width: calc(100% - 48px);
     }
 
+    .profile img,
     .notification img {
         height: 90px;
+    }
+
+    .profile h2,
+    .notification h2 {
+        font-size: 20px;
+    }
+
+    .profile p,
+    .notification p {
+        font-size: 14px;
+    }
+
+    .entry a {
+        font-size: 14px;
     }
 
     .item {

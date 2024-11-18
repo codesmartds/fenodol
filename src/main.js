@@ -363,7 +363,7 @@ function push(videoId) {
         document.querySelector('.more h2').textContent = video.title;
         document.querySelector('.more p').textContent = video.description;
 
-        const topicsList = document.querySelector('.topics-list');
+        const topicsList = document.querySelector('.topics');
         topicsList.innerHTML = '';
         video.topics.forEach(topic => {
             const li = document.createElement('li');
@@ -372,11 +372,13 @@ function push(videoId) {
         });
 
         document.querySelector('aside').style.display = 'flex';
+        document.querySelector('aside .player').style.display = 'flex';
     }
 }
 
 function closeModal() {
     document.querySelector('aside').style.display = 'none';
+    document.querySelector('aside .player').style.display = 'none';
 }
 
 document.querySelectorAll('.thumbnail').forEach(thumb => {
