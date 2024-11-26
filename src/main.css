@@ -924,27 +924,6 @@ input {
     height: 100%;
 }
 
-.social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-}
-
-.social a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 40px;
-    height: 40px;
-    color: #ED1C24;
-    font-size: 20px;
-    line-height: 1;
-    cursor: pointer;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
 .login.change .signup {
     display: flex;
 }
