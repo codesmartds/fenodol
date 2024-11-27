@@ -606,7 +606,6 @@ aside.alert .notification {
 
 .entry {
     display: flex;
-    border: 1px solid #ccc;
 }
 
 .code {
@@ -878,11 +877,15 @@ footer span {
 form {
     display: flex;
     align-items: stretch;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 20px;
     width: 100%;
     height: auto;
     margin: 20px 0;
+}
+
+form .claim {
+    width: 100%;
 }
 
 .profile form,
@@ -890,7 +893,8 @@ form {
     margin: 0;
 }
 
-input {
+input,
+select {
     width: 100%;
     height: 48px;
     color: #000;
@@ -906,11 +910,34 @@ input {
     background-color: transparent;
 }
 
+select {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
 .field {
+    position: relative;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    width: 100%;
     gap: 6px;
+}
+
+.field-2 {
+    width: calc(50% - 10px);
+}
+
+.field i {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    right: 12px;
+    color: #ccc;
+    font-size: 18px;
+    width: auto;
+    height: 48px;
 }
 
 .login {
@@ -924,6 +951,37 @@ input {
     height: 100%;
 }
 
+.image {
+    position: relative;
+    display: flex;
+    min-width: 50%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #ED1C24;
+}
+
+.image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-45deg) scale(1.5);
+    background-image: url(fenodol-white.png);
+    background-repeat: repeat;
+    background-size: 120px;
+    background-position: contain;
+}
+
+.forms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50%;
+    height: 100%;
+}
+
 .login.change .signup {
     display: flex;
 }
@@ -934,6 +992,21 @@ input {
 
 .signup {
     display: none;
+    width: 100%;
+    height: 100%;
+    padding: 60px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-y: auto;
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1;
 }
 
 .slider {
@@ -1063,10 +1136,6 @@ input {
     .content {
         justify-content: space-evenly;
     }
-
-}
-
-@media only screen and (max-width: 425px) {
 
     section {
         padding-top: 50px;

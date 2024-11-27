@@ -1,0 +1,109 @@
+{
+    "quiz1": [
+        {
+            "question": "¿Qué tipo de medicamento es el ibuprofeno y cómo actúa en el cuerpo?",
+            "options": [
+                { "text": "Es un antibiótico que combate infecciones bacterianas.", "score": 0 },
+                { "text": "Es un AINE que reduce la inflamación, el dolor y la fiebre al inhibir la producción de prostaglandinas.", "score": 50, "correct": true },
+                { "text": "Es un analgésico simple que solo alivia el dolor sin reducir la inflamación.", "score": 0 }
+            ]
+        },
+        {
+            "question": "¿Cuáles de los siguientes dolores pueden tratarse con ibuprofeno 400 mg? (Selecciona todas las opciones correctas)",
+            "options": [
+                { "text": "Dolor de cabeza", "score": 50, "correct": true },
+                { "text": "Dolor menstrual", "score": 50, "correct": true },
+                { "text": "Dolor de muelas", "score": 50, "correct": true },
+                { "text": "Dolor de oído por infección bacteriana", "score": 0 }
+            ]
+        },
+        {
+            "question": "¿Quiénes deben evitar el uso de ibuprofeno o consultar a un médico antes de tomarlo?",
+            "options": [
+                { "text": "Personas con antecedentes de problemas gástricos o úlceras.", "score": 50, "correct": true },
+                { "text": "Personas con hipertensión no controlada.", "score": 50, "correct": true },
+                { "text": "Adultos mayores de 65 años.", "score": 50, "correct": true },
+                { "text": "Todas las anteriores.", "score": 50, "correct": true }
+            ]
+        }
+    ],
+    "quiz2": [
+        {
+            "question": "¿Por qué se recomienda tomar ibuprofeno con alimentos o con leche?",
+            "options": [
+                { "text": "Para mejorar la absorción del medicamento.", "score": 0 },
+                { "text": "Para reducir el riesgo de irritación gástrica.", "score": 50, "correct": true },
+                { "text": "Para potenciar su efecto analgésico.", "score": 0 }
+            ]
+        },
+        {
+            "question": "¿Cuál es la dosis máxima diaria recomendada para el ibuprofeno 400 mg sin supervisión médica?",
+            "options": [
+                { "text": "1600 mg (4 cápsulas de 400 mg)", "score": 0 },
+                { "text": "1200 mg (3 cápsulas de 400 mg)", "score": 50, "correct": true },
+                { "text": "800 mg (2 cápsulas de 400 mg)", "score": 0 }
+            ]
+        },
+        {
+            "question": "¿Qué se debe hacer si olvidas tomar una dosis de ibuprofeno?",
+            "options": [
+                { "text": "Tomar una dosis doble en la siguiente toma.", "score": 0 },
+                { "text": "Tomar la dosis olvidada tan pronto como lo recuerdes, a menos que esté cerca la próxima toma.", "score": 50, "correct": true },
+                { "text": "Ignorar la dosis olvidada y esperar a la siguiente.", "score": 0 }
+            ]
+        }
+    ],
+    "quiz3": [
+        {
+            "question": "¿Es seguro consumir ibuprofeno con alcohol?",
+            "options": [
+                { "text": "Sí, no hay problema.", "score": 0 },
+                { "text": "No, aumenta el riesgo de irritación y daño gástrico.", "score": 50, "correct": true },
+                { "text": "Solo si se consume en dosis bajas.", "score": 0 }
+            ]
+        },
+        {
+            "question": "¿Cuántos días se recomienda tomar ibuprofeno para la fiebre antes de consultar a un médico?",
+            "options": [
+                { "text": "No más de 1 día.", "score": 0 },
+                { "text": "No más de 3 días.", "score": 50, "correct": true },
+                { "text": "No más de 5 días.", "score": 0 }
+            ]
+        },
+        {
+            "question": "¿Cuál de las siguientes afirmaciones es correcta sobre el uso de ibuprofeno en el embarazo?",
+            "options": [
+                { "text": "El ibuprofeno es seguro durante todo el embarazo.", "score": 0 },
+                { "text": "No se recomienda en el tercer trimestre.", "score": 50, "correct": true },
+                { "text": "Solo se puede usar bajo supervisión médica en el primer trimestre.", "score": 0 }
+            ]
+        }
+    ],
+    "quiz4": [
+        {
+            "question": "¿Qué consejo puedes dar a alguien que va a tomar ibuprofeno 400 mg para reducir los efectos secundarios? (Selecciona todas las que apliquen)",
+            "options": [
+                { "text": "Tomarlo con comida o leche.", "score": 50, "correct": true },
+                { "text": "No exceder la dosis máxima diaria.", "score": 50, "correct": true },
+                { "text": "Combinarlo con otros AINEs para aumentar el efecto.", "score": 0 },
+                { "text": "Evitar el consumo de alcohol mientras lo tome.", "score": 50, "correct": true }
+            ]
+        },
+        {
+            "question": "¿Por qué el ibuprofeno 400 mg es una buena opción para el alivio de dolores leves a moderados?",
+            "options": [
+                { "text": "Porque proporciona un alivio rápido y es menos agresivo con el estómago en comparación con dosis más altas.", "score": 50, "correct": true },
+                { "text": "Porque es un medicamento sin efectos secundarios.", "score": 0 },
+                { "text": "Porque se puede tomar libremente sin límite de dosis.", "score": 0 }
+            ]
+        },
+        {
+            "question": "¿Cuáles son los beneficios de la cápsula de gel de ibuprofeno en comparación con las tabletas regulares?",
+            "options": [
+                { "text": "Absorción más rápida y menor irritación estomacal.", "score": 50, "correct": true },
+                { "text": "Mayor duración de efecto.", "score": 0 },
+                { "text": "Menor eficacia en el alivio del dolor.", "score": 0 }
+            ]
+        }
+    ]
+}
