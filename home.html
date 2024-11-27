@@ -14,8 +14,15 @@
             <img src="src/fenodol-white.png" alt="Fenodol">
         </a>
 		<div class="slider">
-			<h1>Bienvenido a Fenodol</h1>
-			<p>La plataforma de capacitación que te ayudará a mejorar tus habilidades de manera fácil y rápida.</p>
+			<div class="slide">
+				<div class="info">
+					<h1>Bienvenido a Fenodol</h1>
+					<p>La plataforma de capacitación que te ayudará a mejorar tus habilidades de manera fácil y rápida.</p>
+				</div>
+				<div class="preview">
+
+				</div>
+			</div>
 			<div class="step">
 				<span></span>
 				<span></span>
@@ -327,7 +334,7 @@
 		</div>
 				
 	</section>
-	<aside>
+	<aside style="display: flex; align-items: center;">
 		<div class="player">
 			<video controls>
 				<source src="src/video.mp4" type="video/mp4">
@@ -378,18 +385,137 @@
 			<p>Actualiza tu información de contacto para recibir notificaciones importantes.</p>
 			<form action="">
 				<div class="field">
+					<i class="fa-regular fa-phone"></i>
 					<label for="phone">Teléfono</label>
 					<input type="text" name="phone" id="phone" placeholder="Ingresa tu nuevo número de teléfono" value="+502 3838-0047">
 				</div>
-				<div class="field">
-					<label for="email">Correo Electrónico</label>
-					<input type="email" name="email" id="email" placeholder="Ingresa tu nuevo correo electrónico" value="fernandamarro@gmail.com">
+				<div class="field error">
+					<i class="fa-regular fa-lock"></i>
+					<label for="password">Nueva Contraseña</label>
+					<input type="password" name="password" id="password" placeholder="Crea una contraseña" required>
+				</div>
+				<div class="field error">
+					<i class="fa-regular fa-lock"></i>
+					<label for="confirm">Confirmar Contraseña</label>
+					<input type="password" name="confirm" id="confirm" placeholder="Confirma la contraseña" required>
 				</div>
 				<button onclick="profile()" class="claim">Actualizar</button>
 			</form>
 			<small>Recibirás un código de verificación a tu nuevo número o correo para confirmar el cambio.</small>
-		</div>  
+		</div>
+		<div class="notification" style="display: flex;">
+			<div class="form-actions">
+				<span class="back" id="back>
+					<i class="fa-solid fa-chevron-left"></i>
+					Regresar
+				</span> 
+				<span class="total-questions">
+					<span class="current-question">1</span>
+					/
+					<span class="all-questions">10</span>
+				</span>
+			</div>
+			<div class="question">
+				<h2>¿Por qué el ibuprofeno es considerado un medicamento de venta libre?</h2>
+				<p>Seleciona la opcion correcta</p>
+				<div class="answers">
+					<span class="selected">No tiene efectos secundarios</span>
+					<span>Uso sin receta médica en dosis bajas</span>
+					<span>Seguro para la mayoría de las personas</span>
+				</div>
+			</div>
+			<div class="question">
+				<h2>¿Por qué el ibuprofeno es considerado un medicamento de venta libre?</h2>
+				<p>Seleciona la opcion correcta</p>
+				<div class="answers">
+					<span class="selected">No tiene efectos secundarios</span>
+					<span>Uso sin receta médica en dosis bajas</span>
+					<span>Seguro para la mayoría de las personas</span>
+				</div>
+			</div>
+			<div class="question">
+				<h2>¿Por qué el ibuprofeno es considerado un medicamento de venta libre?</h2>
+				<p>Seleciona la opcion correcta</p>
+				<div class="answers">
+					<span class="selected">No tiene efectos secundarios</span>
+					<span>Uso sin receta médica en dosis bajas</span>
+					<span>Seguro para la mayoría de las personas</span>
+				</div>
+			</div>
+			<div class="question">
+				<h2>¿Por qué el ibuprofeno es considerado un medicamento de venta libre?</h2>
+				<p>Seleciona la opcion correcta</p>
+				<div class="answers">
+					<span class="selected">No tiene efectos secundarios</span>
+					<span>Uso sin receta médica en dosis bajas</span>
+					<span>Seguro para la mayoría de las personas</span>
+				</div>
+			</div>
+			<div class="question">
+				<h2>¿Por qué el ibuprofeno es considerado un medicamento de venta libre?</h2>
+				<p>Seleciona la opcion correcta</p>
+				<div class="answers">
+					<span class="selected">No tiene efectos secundarios</span>
+					<span>Uso sin receta médica en dosis bajas</span>
+					<span>Seguro para la mayoría de las personas</span>
+				</div>
+			</div>
+			<div class="question">
+				<h2>¿Por qué el ibuprofeno es considerado un medicamento de venta libre?</h2>
+				<p>Seleciona la opcion correcta</p>
+				<div class="answers">
+					<span class="selected">No tiene efectos secundarios</span>
+					<span>Uso sin receta médica en dosis bajas</span>
+					<span>Seguro para la mayoría de las personas</span>
+				</div>
+			</div>
+			<div class="score">
+				<h2>¡Has Terminado!</h2>
+				<p>Aquí está tu puntaje final:</p>
+				<span class="points-test">96%</span>
+			</div>			
+			<small>Recuerda que el quiz tiene un tiempo límite y las respuestas incorrectas pueden restar puntos. ¡Hazlo lo mejor posible!</small>
+		</div>
 	</aside>
 </body>
 <script type="text/javascript" src="src/main.js"></script>
+<script>
+	var current = 0;
+var totalQuestions = document.getElementsByClassName("question").length;
+show(current);
+
+function show(n) {
+    var tabs = document.getElementsByClassName("question");
+    tabs[n].style.display = "flex";
+    document.querySelector(".current-question").innerText = n + 1;
+    document.getElementById("back").style.display = n == 0 ? "none" : "flex";
+    if (n === totalQuestions - 1) {
+        document.querySelector(".score").style.display = "block";
+    } else {
+        document.querySelector(".score").style.display = "none";
+    }
+    update(n, totalQuestions);
+}
+
+function move(n) {
+    var tabs = document.getElementsByClassName("question");
+    tabs[current].style.display = "none";
+    current += n;
+    if (current >= tabs.length) {
+        return false;
+    }
+    show(current);
+}
+
+var answers = document.querySelectorAll('.answers span');
+answers.forEach(function(answer) {
+    answer.addEventListener('click', function() {
+        move(1);
+    });
+});
+
+function update(step, total) {
+}
+
+</script>
 </html>
