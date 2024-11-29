@@ -106,10 +106,12 @@
 				</div>
 				<div class="video viewed">
 					<div onclick="push()" class="thumbnail" id="video-4">
+						<div class="evaluation">Examen</div>
 						<div class="points">50 pts</div>
 					</div>
 					<div class="progress">
 						<div class="status"></div>
+						<button onclick="startQuiz('quiz1')" class="test"></button>
 						<span class="duration"><i class="fa-regular fa-clock"></i>15 min</span>
 						<div class="bar">
 							<div class="watched"></div>
@@ -181,6 +183,7 @@
 					</div>
 					<div class="progress">
 						<div class="status"></div>
+						<button onclick="startQuiz('quiz2')" class="test"></button>
 						<span class="duration"><i class="fa-regular fa-clock"></i>12 min</span>
 						<div class="bar">
 							<div class="watched"></div>
@@ -247,10 +250,12 @@
 				</div>
 				<div class="video locked">
 					<div class="thumbnail" id="video-12">
+						<div class="evaluation">Examen</div>
 						<div class="points">50 pts</div>
 					</div>
 					<div class="progress">
 						<div class="status"></div>
+						<button onclick="startQuiz('quiz3')" class="test"></button>
 						<span class="duration"><i class="fa-regular fa-clock"></i>11 min</span>
 						<div class="bar">
 							<div class="watched"></div>
@@ -322,6 +327,7 @@
 					</div>
 					<div class="progress">
 						<div class="status"></div>
+						<button onclick="startQuiz('quiz4')" class="test"></button>
 						<span class="duration"><i class="fa-regular fa-clock"></i>10 min</span>
 						<div class="bar">
 							<div class="watched"></div>
@@ -334,7 +340,7 @@
 		</div>
 				
 	</section>
-	<aside style="display: flex; align-items: center;">
+	<aside id="overlay">
 		<div class="player">
 			<video controls>
 				<source src="src/video.mp4" type="video/mp4">
@@ -403,119 +409,154 @@
 			</form>
 			<small>Recibirás un código de verificación a tu nuevo número o correo para confirmar el cambio.</small>
 		</div>
-		<div class="notification" style="display: flex;">
+		<div class="notification" id="quiz">
 			<div class="form-actions">
-				<span class="back" id="back>
+				<button class="back" id="back">
 					<i class="fa-solid fa-chevron-left"></i>
 					Regresar
-				</span> 
-				<span class="total-questions">
-					<span class="current-question">1</span>
+				</button>
+				<span class="question-numbers">
+					<span class="question-current">1</span>
 					/
-					<span class="all-questions">10</span>
+					<span class="question-all">10</span>
 				</span>
 			</div>
-			<div class="question">
-				<h2>¿Por qué el ibuprofeno es considerado un medicamento de venta libre?</h2>
-				<p>Seleciona la opcion correcta</p>
-				<div class="answers">
-					<span class="selected">No tiene efectos secundarios</span>
-					<span>Uso sin receta médica en dosis bajas</span>
-					<span>Seguro para la mayoría de las personas</span>
-				</div>
-			</div>
-			<div class="question">
-				<h2>¿Por qué el ibuprofeno es considerado un medicamento de venta libre?</h2>
-				<p>Seleciona la opcion correcta</p>
-				<div class="answers">
-					<span class="selected">No tiene efectos secundarios</span>
-					<span>Uso sin receta médica en dosis bajas</span>
-					<span>Seguro para la mayoría de las personas</span>
-				</div>
-			</div>
-			<div class="question">
-				<h2>¿Por qué el ibuprofeno es considerado un medicamento de venta libre?</h2>
-				<p>Seleciona la opcion correcta</p>
-				<div class="answers">
-					<span class="selected">No tiene efectos secundarios</span>
-					<span>Uso sin receta médica en dosis bajas</span>
-					<span>Seguro para la mayoría de las personas</span>
-				</div>
-			</div>
-			<div class="question">
-				<h2>¿Por qué el ibuprofeno es considerado un medicamento de venta libre?</h2>
-				<p>Seleciona la opcion correcta</p>
-				<div class="answers">
-					<span class="selected">No tiene efectos secundarios</span>
-					<span>Uso sin receta médica en dosis bajas</span>
-					<span>Seguro para la mayoría de las personas</span>
-				</div>
-			</div>
-			<div class="question">
-				<h2>¿Por qué el ibuprofeno es considerado un medicamento de venta libre?</h2>
-				<p>Seleciona la opcion correcta</p>
-				<div class="answers">
-					<span class="selected">No tiene efectos secundarios</span>
-					<span>Uso sin receta médica en dosis bajas</span>
-					<span>Seguro para la mayoría de las personas</span>
-				</div>
-			</div>
-			<div class="question">
-				<h2>¿Por qué el ibuprofeno es considerado un medicamento de venta libre?</h2>
-				<p>Seleciona la opcion correcta</p>
-				<div class="answers">
-					<span class="selected">No tiene efectos secundarios</span>
-					<span>Uso sin receta médica en dosis bajas</span>
-					<span>Seguro para la mayoría de las personas</span>
-				</div>
-			</div>
-			<div class="score">
-				<h2>¡Has Terminado!</h2>
-				<p>Aquí está tu puntaje final:</p>
-				<span class="points-test">96%</span>
-			</div>			
-			<small>Recuerda que el quiz tiene un tiempo límite y las respuestas incorrectas pueden restar puntos. ¡Hazlo lo mejor posible!</small>
+			<small class="form-disclaimer">Recuerda que el quiz tiene un tiempo límite y las respuestas incorrectas pueden restar puntos. ¡Hazlo lo mejor posible!</small>
 		</div>
 	</aside>
 </body>
 <script type="text/javascript" src="src/main.js"></script>
 <script>
-	var current = 0;
-var totalQuestions = document.getElementsByClassName("question").length;
-show(current);
+let current = 0;
+let totalScore = 0;
+let selectedQuiz = [];
+let totalQuestions = 0;
+let scores = [];
+
+function startQuiz(quizName) {
+    const quizzes = {
+        quiz1: quiz1,
+        quiz2: quiz2,
+        quiz3: quiz3,
+        quiz4: quiz4
+    };
+
+    selectedQuiz = quizzes[quizName];
+    totalQuestions = selectedQuiz.length + 1;
+    scores = Array(selectedQuiz.length).fill(0);
+    document.querySelector(".question-all").innerText = totalQuestions;
+    createQuestions();
+    document.getElementById("overlay").style.display = "flex";
+    document.getElementById("quiz").style.display = "flex";
+    show(0);
+}
+
+function createQuestions() {
+    const questionsContainer = document.createElement("div");
+    questionsContainer.classList.add("form-container");
+
+    selectedQuiz.forEach((questionData, index) => {
+        const questionContainer = document.createElement("div");
+        questionContainer.classList.add("question");
+
+        questionContainer.innerHTML = `
+            <h2>${questionData.question}</h2>
+            <p>Selecciona la opción correcta</p>
+            <div class="answers">
+                ${questionData.options.map((option, optionIndex) => `
+                    <button 
+                        class="option" 
+                        data-score="${option.score}" 
+                        data-index="${index}" 
+                        data-option-index="${optionIndex}"
+                    >
+                        ${option.text}
+                    </button>
+                `).join('')}
+            </div>
+        `;
+
+        questionContainer.querySelectorAll('.option').forEach(option => {
+            option.addEventListener("click", function () {
+                const questionIndex = parseInt(option.getAttribute("data-index"), 10);
+                const score = parseInt(option.getAttribute("data-score"), 10);
+
+                scores[questionIndex] = score;
+                const options = option.closest('.answers').querySelectorAll('.option');
+                options.forEach(btn => btn.classList.remove("selected"));
+                option.classList.add("selected");
+                move(1);
+            });
+        });
+
+        questionsContainer.appendChild(questionContainer);
+
+        if (index !== 0) {
+            questionContainer.style.display = 'none';
+        }
+    });
+
+    const summaryContainer = document.createElement("div");
+    summaryContainer.classList.add("question", "summary");
+    summaryContainer.innerHTML = `
+        <h2>¡Has Terminado!</h2>
+        <p>Aquí está tu puntaje final:</p>
+        <span class="score">0</span>
+        <button class="claim" id="restart">Cerrar</button>
+    `;
+    summaryContainer.style.display = 'none';
+    questionsContainer.appendChild(summaryContainer);
+
+    summaryContainer.querySelector("#restart").addEventListener("click", closeModal);
+
+    const existingQuestionsContainer = document.querySelector(".form-container");
+    if (existingQuestionsContainer) {
+        existingQuestionsContainer.remove();
+    }
+
+    document.getElementById("quiz").appendChild(questionsContainer);
+}
 
 function show(n) {
-    var tabs = document.getElementsByClassName("question");
-    tabs[n].style.display = "flex";
-    document.querySelector(".current-question").innerText = n + 1;
-    document.getElementById("back").style.display = n == 0 ? "none" : "flex";
-    if (n === totalQuestions - 1) {
-        document.querySelector(".score").style.display = "block";
+    const questions = document.querySelectorAll(".form-container .question");
+    questions.forEach((question, index) => {
+        question.style.display = index === n ? 'flex' : 'none';
+    });
+
+    if (n < totalQuestions - 1) {
+        document.querySelector(".question-current").innerText = n + 1;
     } else {
-        document.querySelector(".score").style.display = "none";
+        document.querySelector(".question-current").innerText = totalQuestions;
+        calculateScore();
     }
-    update(n, totalQuestions);
+
+    document.getElementById("back").style.display = n === 0 ? "none" : "flex";
 }
 
 function move(n) {
-    var tabs = document.getElementsByClassName("question");
-    tabs[current].style.display = "none";
-    current += n;
-    if (current >= tabs.length) {
-        return false;
+    const newIndex = Math.min(Math.max(current + n, 0), totalQuestions - 1);
+    if (newIndex !== current) {
+        current = newIndex;
+        show(current);
     }
-    show(current);
 }
 
-var answers = document.querySelectorAll('.answers span');
-answers.forEach(function(answer) {
-    answer.addEventListener('click', function() {
-        move(1);
-    });
+function calculateScore() {
+    totalScore = scores.reduce((sum, score) => sum + score, 0);
+    document.querySelector(".score").innerText = totalScore;
+}
+
+function closeModal() {
+    current = 0;
+    totalScore = 0;
+    scores.fill(0);
+    document.getElementById("overlay").style.display = "none";
+    document.getElementById("quiz").style.display = "none";
+}
+
+document.getElementById("back").addEventListener("click", function () {
+    move(-1);
 });
-
-function update(step, total) {
-}
 
 </script>
 </html>

@@ -179,211 +179,175 @@ const videos = [
 
 const quiz1 = [
     {
-        question: "¿Qué tipo de medicamento es el ibuprofeno y cómo actúa en el cuerpo?",
+        question: "¿Qué es el ibuprofeno y cómo actúa?",
         options: [
             { text: "Antibiótico contra infecciones.", score: 0 },
-            { text: "AINE que reduce dolor, inflamación y fiebre.", score: 50, correct: true },
-            { text: "Analgésico que solo alivia el dolor.", score: 0 }
+            { text: "AINE que reduce dolor, inflamación y fiebre.", score: 20, correct: true },
+            { text: "Cura la gripe instantáneamente.", score: 0 }
         ]
     },
     {
-        question: "¿Cuáles de los siguientes dolores pueden tratarse con ibuprofeno 400 mg? (Selecciona todas las opciones correctas)",
+        question: "¿Qué dolores trata el ibuprofeno 400 mg?",
         options: [
-            { text: "Dolor de cabeza", score: 50, correct: true },
-            { text: "Dolor menstrual", score: 50, correct: true },
-            { text: "Dolor de muelas", score: 50, correct: true },
-            { text: "Dolor de oído por infección", score: 0 }
+            { text: "Dolor menstrual", score: 0 },
+            { text: "Dolor de cabeza", score: 20, correct: true },
+            { text: "Elimina cualquier tipo de alergia.", score: 0 }
         ]
     },
     {
-        question: "¿Quiénes deben evitar el uso de ibuprofeno o consultar a un médico antes de tomarlo?",
+        question: "¿Quiénes deben evitar el ibuprofeno?",
         options: [
-            { text: "Con problemas gástricos.", score: 50, correct: true },
-            { text: "Con hipertensión no controlada.", score: 50, correct: true },
-            { text: "Mayores de 65 años.", score: 50, correct: true },
-            { text: "Todas las anteriores.", score: 50, correct: true }
+            { text: "Con problemas gástricos.", score: 20, correct: true },
+            { text: "Personas que comen frutas.", score: 0 },
+            { text: "Quienes tienen cabello rizado.", score: 0 }
         ]
     },
     {
-        question: "¿Por qué el ibuprofeno es considerado un medicamento de venta libre?",
+        question: "¿Por qué el ibuprofeno es de venta libre?",
         options: [
             { text: "Porque no tiene efectos secundarios.", score: 0 },
-            { text: "Porque está aprobado en dosis bajas.", score: 50, correct: true },
-            { text: "Porque es seguro para todos.", score: 0 }
+            { text: "Porque está aprobado en dosis bajas.", score: 20, correct: true },
+            { text: "Porque se usa como suplemento alimenticio.", score: 0 }
         ]
     },
     {
-        question: "¿Cuánto tiempo debe pasar antes de tomar una segunda dosis de ibuprofeno si se necesita?",
+        question: "¿Cuánto tiempo entre dosis de ibuprofeno?",
         options: [
-            { text: "Al menos 2 horas.", score: 50, correct: true },
-            { text: "Al menos 4 horas.", score: 0 },
-            { text: "Al menos 6 horas.", score: 0 }
-        ]
-    },
-    {
-        question: "¿Por qué el ibuprofeno puede ser más adecuado que otros analgésicos para tratar dolores inflamatorios?",
-        options: [
-            { text: "Porque reduce inflamación y dolor.", score: 50, correct: true },
-            { text: "Porque solo alivia el dolor.", score: 0 },
-            { text: "Porque no afecta el estómago.", score: 0 }
+            { text: "Al menos 2 horas.", score: 0 },
+            { text: "Al menos 6 horas.", score: 20, correct: true },
+            { text: "Cada media hora.", score: 0 }
         ]
     }
 ];
 
 const quiz2 = [
     {
-        question: "¿Por qué se recomienda tomar ibuprofeno con alimentos o con leche?",
+        question: "¿Por qué tomar ibuprofeno con alimentos?",
         options: [
             { text: "Para mejorar la absorción.", score: 0 },
-            { text: "Para reducir irritación gástrica.", score: 50, correct: true },
-            { text: "Para potenciar el efecto analgésico.", score: 0 }
+            { text: "Para reducir irritación gástrica.", score: 20, correct: true },
+            { text: "Para convertirlo en un probiótico.", score: 0 }
         ]
     },
     {
-        question: "¿Cuál es la dosis máxima diaria recomendada para el ibuprofeno 400 mg sin supervisión médica?",
+        question: "¿Dosis máxima diaria de ibuprofeno 400 mg?",
         options: [
             { text: "1600 mg (4 cápsulas)", score: 0 },
-            { text: "1200 mg (3 cápsulas)", score: 50, correct: true },
-            { text: "800 mg (2 cápsulas)", score: 0 }
+            { text: "1200 mg (3 cápsulas)", score: 20, correct: true },
+            { text: "Todo el frasco.", score: 0 }
         ]
     },
     {
-        question: "¿Qué se debe hacer si olvidas tomar una dosis de ibuprofeno?",
+        question: "¿Qué hacer si olvidas una dosis?",
         options: [
             { text: "Tomar una dosis doble.", score: 0 },
-            { text: "Tomar la dosis olvidada pronto.", score: 50, correct: true },
-            { text: "Ignorar la dosis y esperar.", score: 0 }
+            { text: "Tomar la dosis olvidada pronto.", score: 20, correct: true },
+            { text: "Nunca volver a tomarlo.", score: 0 }
         ]
     },
     {
-        question: "¿Cuánto tiempo debes esperar para tomar ibuprofeno después de una comida pesada?",
+        question: "¿Cuánto esperar tras una comida pesada?",
         options: [
             { text: "Inmediatamente después.", score: 0 },
-            { text: "Al menos 30 minutos.", score: 50, correct: true },
-            { text: "No importa el tiempo.", score: 0 }
+            { text: "Al menos 30 minutos.", score: 20, correct: true },
+            { text: "3 días completos.", score: 0 }
         ]
     },
     {
-        question: "¿Es seguro tomar ibuprofeno durante un ayuno?",
+        question: "¿Es seguro tomar ibuprofeno en ayuno?",
         options: [
             { text: "Sí, no hay problema.", score: 0 },
-            { text: "No, causa irritación estomacal.", score: 50, correct: true },
-            { text: "Solo con agua.", score: 0 }
-        ]
-    },
-    {
-        question: "¿Qué debe hacerse si el ibuprofeno no alivia el dolor después de varias dosis?",
-        options: [
-            { text: "Aumentar la dosis.", score: 0 },
-            { text: "Consultar a un médico.", score: 50, correct: true },
-            { text: "Dejar de tomarlo.", score: 0 }
+            { text: "No, causa irritación estomacal.", score: 20, correct: true },
+            { text: "Sí, lo convierte en un jugo détox.", score: 0 }
         ]
     }
 ];
 
 const quiz3 = [
     {
-        question: "¿Es seguro consumir ibuprofeno con alcohol?",
+        question: "¿Es seguro tomar ibuprofeno con alcohol?",
         options: [
             { text: "Sí, no hay problema.", score: 0 },
-            { text: "No, aumenta el riesgo de daño gástrico.", score: 50, correct: true },
-            { text: "Solo en dosis bajas.", score: 0 }
+            { text: "No, aumenta el riesgo de daño gástrico.", score: 20, correct: true },
+            { text: "Lo convierte en un cóctel medicinal.", score: 0 }
         ]
     },
     {
-        question: "¿Cuántos días se recomienda tomar ibuprofeno para la fiebre antes de consultar a un médico?",
+        question: "¿Cuántos días tomar ibuprofeno para fiebre?",
         options: [
             { text: "No más de 1 día.", score: 0 },
-            { text: "No más de 3 días.", score: 50, correct: true },
-            { text: "No más de 5 días.", score: 0 }
+            { text: "No más de 3 días.", score: 20, correct: true },
+            { text: "Hasta que baje la fiebre sin límite.", score: 0 }
         ]
     },
     {
-        question: "¿Cuál de las siguientes afirmaciones es correcta sobre el uso de ibuprofeno en el embarazo?",
+        question: "¿Por qué evitar ibuprofeno en el tercer trimestre?",
         options: [
-            { text: "Es seguro durante todo el embarazo.", score: 0 },
-            { text: "No recomendado en el tercer trimestre.", score: 50, correct: true },
-            { text: "Solo bajo supervisión médica en el primer trimestre.", score: 0 }
-        ]
-    },
-    {
-        question: "¿Por qué el ibuprofeno no es recomendado durante el tercer trimestre del embarazo?",
-        options: [
-            { text: "Causa problemas en el desarrollo del bebé.", score: 50, correct: true },
-            { text: "Solo si el dolor es insoportable.", score: 0 },
+            { text: "Causa problemas en el desarrollo.", score: 20, correct: true },
+            { text: "Porque el bebé puede volverse alérgico a las pastillas.", score: 0 },
             { text: "No tiene efectos negativos.", score: 0 }
         ]
     },
     {
-        question: "¿Es seguro tomar ibuprofeno durante la lactancia?",
+        question: "¿Ibuprofeno en lactancia: seguro o no?",
         options: [
             { text: "Sí, es completamente seguro.", score: 0 },
-            { text: "Sí, en dosis bajas y con recomendación médica.", score: 50, correct: true },
-            { text: "No, se recomienda evitarlo.", score: 0 }
+            { text: "Sí, en dosis bajas.", score: 20, correct: true },
+            { text: "Lo convierte en un analgésico para el bebé.", score: 0 }
         ]
     },
     {
-        question: "¿Cuál es el efecto potencial de tomar ibuprofeno durante un embarazo de alto riesgo?",
+        question: "¿Efecto de ibuprofeno en embarazo de alto riesgo?",
         options: [
             { text: "No tiene efectos adversos.", score: 0 },
-            { text: "Aumenta el riesgo de complicaciones.", score: 50, correct: true },
-            { text: "Alivia el estrés y ansiedad.", score: 0 }
+            { text: "Aumenta el riesgo de complicaciones.", score: 20, correct: true },
+            { text: "Cura cualquier malestar del embarazo.", score: 0 }
         ]
     }
 ];
 
 const quiz4 = [
     {
-        question: "¿Qué consejo puedes dar a alguien que va a tomar ibuprofeno 400 mg para reducir los efectos secundarios? (Selecciona todas las que apliquen)",
+        question: "¿Cómo reducir efectos secundarios del ibuprofeno?",
         options: [
-            { text: "Tomarlo con comida o leche.", score: 50, correct: true },
-            { text: "No exceder la dosis diaria.", score: 50, correct: true },
-            { text: "Combinarlo con otros AINEs.", score: 0 },
-            { text: "Evitar alcohol.", score: 50, correct: true }
+            { text: "Tomarlo con comida o leche.", score: 0 },
+            { text: "No exceder la dosis diaria.", score: 20, correct: true },
+            { text: "Combinarlo con refrescos energéticos.", score: 0 }
         ]
     },
     {
-        question: "¿Por qué el ibuprofeno 400 mg es una buena opción para el alivio de dolores leves a moderados?",
+        question: "¿Por qué ibuprofeno 400 mg es una buena opción?",
         options: [
-            { text: "Alivio rápido y menos agresivo con el estómago.", score: 50, correct: true },
+            { text: "Alivio rápido y menos agresivo.", score: 20, correct: true },
             { text: "Porque no tiene efectos secundarios.", score: 0 },
             { text: "Porque no tiene límite de dosis.", score: 0 }
         ]
     },
     {
-        question: "¿Cuáles son los beneficios de la cápsula de gel de ibuprofeno en comparación con las tabletas regulares?",
+        question: "¿Beneficio de cápsulas de gel vs tabletas?",
         options: [
-            { text: "Absorción rápida y menos irritación.", score: 50, correct: true },
+            { text: "Absorción rápida y menos irritación.", score: 20, correct: true },
             { text: "Mayor duración del efecto.", score: 0 },
-            { text: "Menor eficacia.", score: 0 }
+            { text: "Las tabletas son mejores.", score: 0 }
         ]
     },
     {
-        question: "¿Qué factor puede hacer que el ibuprofeno sea menos efectivo en algunas personas?",
+        question: "¿Qué reduce la eficacia del ibuprofeno?",
         options: [
-            { text: "Obesidad y metabolismo lento.", score: 50, correct: true },
-            { text: "Edad avanzada.", score: 0 },
-            { text: "Bajo nivel de actividad física.", score: 0 }
+            { text: "Obesidad y metabolismo lento.", score: 20, correct: true },
+            { text: "Comer helado después.", score: 0 },
+            { text: "Cantar canciones mientras lo tomas.", score: 0 }
         ]
     },
     {
-        question: "¿Qué tipo de dolor puede ser tratado con dosis altas de ibuprofeno?",
+        question: "¿Qué tipo de dolor requiere dosis altas de ibuprofeno?",
         options: [
-            { text: "Dolor muscular o inflamación importante.", score: 50, correct: true },
+            { text: "Dolor muscular o inflamación importante.", score: 20, correct: true },
             { text: "Dolor de cabeza leve.", score: 0 },
-            { text: "Dolor dental.", score: 0 }
-        ]
-    },
-    {
-        question: "¿Por qué es importante seguir las instrucciones del prospecto de ibuprofeno?",
-        options: [
-            { text: "Para evitar efectos secundarios graves.", score: 50, correct: true },
-            { text: "Porque el medicamento es tóxico.", score: 0 },
-            { text: "Porque garantiza mayor efectividad.", score: 0 }
+            { text: "Cualquier dolor menor.", score: 0 }
         ]
     }
 ];
-
 
 function push(videoId) {
     const video = videos.find(v => v.id === videoId);
