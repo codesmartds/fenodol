@@ -9,20 +9,13 @@
 	<script type="text/javascript" src="https://kit.fontawesome.com/4c9962e02c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <a href="#" class="mobile">
-            <img src="src/fenodol-white.png" alt="Fenodol">
-        </a>
+    <header class="slide-2">
 		<div class="slider">
-			<div class="slide">
-				<div class="info">
-					<h1>Bienvenido a Fenodol</h1>
-					<p>La plataforma de capacitación que te ayudará a mejorar tus habilidades de manera fácil y rápida.</p>
-				</div>
-				<div class="preview">
-
-				</div>
-			</div>
+			<a href="#" class="mobile">
+				<img src="src/fenodol-white.png" alt="Fenodol">
+			</a>
+			<h1>Bienvenido a Fenodol</h1>
+			<p>La plataforma de capacitación que te ayudará a mejorar tus habilidades de manera fácil y rápida.</p>
 			<div class="step">
 				<span></span>
 				<span></span>
@@ -367,7 +360,7 @@
 				</div>
 			</div>				  
 		</div>
-		<div class="notification">
+		<div class="notification" id="alert">
 			<span onclick="alert()" class="close">
 				<i class="fa-solid fa-chevron-left"></i>
 				Regresar
@@ -397,13 +390,8 @@
 				</div>
 				<div class="field error">
 					<i class="fa-regular fa-lock"></i>
-					<label for="password">Nueva Contraseña</label>
+					<label for="password">Contraseña</label>
 					<input type="password" name="password" id="password" placeholder="Crea una contraseña" required>
-				</div>
-				<div class="field error">
-					<i class="fa-regular fa-lock"></i>
-					<label for="confirm">Confirmar Contraseña</label>
-					<input type="password" name="confirm" id="confirm" placeholder="Confirma la contraseña" required>
 				</div>
 				<button onclick="profile()" class="claim">Actualizar</button>
 			</form>
