@@ -407,10 +407,6 @@ nav.innerHTML = `
         <i class="fa-regular fa-coins"></i>
         500 / Q50.00
     </a>
-    <a href="premios" class="link cash">
-        <i class="fa-solid fa-trophy"></i>
-        Liga Oro
-    </a>
     <a href="index" class="link">
         <i class="fa-solid fa-arrow-right-from-bracket"></i>
         Cerrar Sesión
