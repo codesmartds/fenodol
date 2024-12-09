@@ -179,9 +179,8 @@ nav {
 header {
     position: relative;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
     color: #fff;
     width: 1280px;
     height: auto;
@@ -768,7 +767,6 @@ aside.alert #alert {
     font-size: 16px !important;
     height: 50px;
     border-radius: 999px;
-    margin-top: 30px;
 }
 
 .id {
@@ -896,11 +894,6 @@ aside.alert #alert {
     border: 0;
 }
 
-.disabled .item::after {
-    color: #999;
-    background-color: #ddd;
-}
-
 .disabled .item::before {
     display: none;
 }
@@ -950,7 +943,7 @@ aside.alert #alert {
     padding: 30px;
     overflow: hidden;
     border-radius: 16px;
-    border-width: 3px;
+    border-width: 2px;
     border-style: solid;
     border-color: #dddd;
 }
@@ -1200,8 +1193,15 @@ select {
 .slider-actions {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    width: 100%;
     gap: 12px;
     z-index: 3;
+    margin-top: 30px;
+}
+
+.slider-actions .go-to {
+    margin-right: auto;
 }
 
 .slider-actions span {
@@ -1210,16 +1210,16 @@ select {
     width: auto;
     height: 50px;
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1;
-    padding: 0 24px;
-    border-radius: 16px;
+    padding: 0 16px;
+    border-radius: 8px;
     background-color: rgba(0, 0, 0, 0.3);
 
 }
 
-.slider-actions button {
+.slider-actions .swipe {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1745,6 +1745,68 @@ select {
     .answers .option {
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+
+    .go-to {
+        font-size: 14px !important;
+        height: 40px;
+    }
+
+    .slider-actions span {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .slider-actions .swipe {
+        width: 40px;
+        height: 40px;
+    }
+
+    .rewards {
+        flex-direction: column;
+    }
+
+    .lock-this {
+        display: none;
+    }
+
+    .prize-level.disabled {
+        border: 0;
+    }
+
+    .prize-level.disabled .item {
+        border: 2px solid #dddd;
+    }
+
+    .prize-level.disabled .item img {
+        display: none;
+    }
+
+    .prize-level.disabled .item::after {
+        font-family: "Font Awesome 6 Pro";
+        content: "\f30d";
+        display: flex;
+        align-items: center;
+        height: 90px;
+        color: #ccc;
+        font-size: 40px;
+        font-weight: normal;
+        order: -1;
+    }
+
+    .disabled .item p,
+    .disabled .item .claim {
+        font-size: 0px !important;
+    }
+
+    .disabled .item p::after {
+        content: "Bloqueado";
+        font-size: 14px;
+    }
+
+    .disabled .item .claim::after {
+        content: "Bloqueado";
+        font-size: 14px !important;
     }
 
 }
