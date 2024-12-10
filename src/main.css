@@ -214,6 +214,14 @@ header::before {
     z-index: -1;
 }
 
+.slide-1:before {
+    background-image: url(web-slider-2.png);
+}
+
+.slide-2:before {
+    background-image: url(web-slider-4.png);
+}
+
 .mobile {
     display: none;
 }
@@ -1140,7 +1148,7 @@ select {
     min-width: 50%;
     height: 100%;
     overflow: hidden;
-    background-image: url(web-login-1.png);
+    background-image: url(web-login-1.jpg);
     background-position: left center;
     background-size: cover;
 }
